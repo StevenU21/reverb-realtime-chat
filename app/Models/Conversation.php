@@ -18,4 +18,14 @@ class Conversation extends Model
     {
         return 'slug';
     }
+
+    public function users()
+    {
+        return $this->belongsToMany(User::class);
+    }
+
+    public function messages()
+    {
+        return $this->hasMany(Message::class);
+    }
 }
