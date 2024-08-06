@@ -12,7 +12,19 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('messages', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
+            $table->text('content');
+            
+            $table->integer('conversation_id')->unsigned();
+            $table->foreign('conversation_id')->references('id')->on('conversations')->onDelete('cascade');
+
+            $table->integer('sender_id')->unsigned();
+            $table->foreign('sender_id')->references('id')->on('users')->onDelete('cascade');
+
+            $table->integer('receiver_id')->unsigned();
+            $table->foreign('receiver_id')->references('id')->on('users')->onDelete('cascade');
+
+            $table->index(['conversation_id', 'sender_id', 'receiver_id']);
             $table->timestamps();
         });
     }
