@@ -1,67 +1,91 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Reverb Realtime Chat ![Laravel](https://img.shields.io/badge/Laravel-11-red) ![Realtime](https://img.shields.io/badge/Realtime-Enabled-blue)
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Reverb Realtime Chat es una aplicación de chat en tiempo real construida con Laravel 11. Permite a los usuarios ver una lista de otros usuarios, iniciar conversaciones, y chatear en tiempo real utilizando Laravel Echo, Pusher y Laravel Reverb.
 
-## About Laravel
+## Tecnologías Utilizadas
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+- **Laravel 11** ![Laravel](https://img.shields.io/badge/Laravel-11-red): Framework de PHP para el desarrollo de la aplicación.
+- **Laravel Reverb** ![Laravel Reverb](https://img.shields.io/badge/Laravel%20Reverb-Active-yellow): Servicio de broadcasting utilizado para la comunicación en tiempo real.
+- **Pusher** ![Pusher](https://img.shields.io/badge/Pusher-Enabled-lightblue): Servicio para la gestión de canales en tiempo real.
+- **Laravel Echo** ![Laravel Echo](https://img.shields.io/badge/Laravel%20Echo-Active-green): Biblioteca para escuchar eventos de WebSocket.
+- **JavaScript con AJAX** ![JavaScript](https://img.shields.io/badge/JavaScript-AJAX-yellowgreen): Para actualizaciones dinámicas sin recargar la página.
+- **Blade** ![Blade](https://img.shields.io/badge/Blade-Templates-lightgray): Motor de plantillas de Laravel para las vistas.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Características
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- **Lista de Usuarios** ![Users](https://img.shields.io/badge/Users-List-orange): Visualiza una lista de usuarios disponibles para iniciar una conversación.
+- **Lista de Conversaciones** ![Conversations](https://img.shields.io/badge/Conversations-List-purple): Consulta la lista de conversaciones actuales.
+- **Mensajería en Tiempo Real** ![Chat](https://img.shields.io/badge/Realtime%20Chat-Enabled-blue): Envía y recibe mensajes en tiempo real con otros usuarios.
 
-## Learning Laravel
+## Instalación y Configuración
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Sigue estos pasos para configurar el proyecto en tu entorno local:
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+1. **Clonar el Repositorio** ![Clone](https://img.shields.io/badge/Clone-Git%20Repo-blueviolet)
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+    ```bash
+    git clone https://github.com/tu-usuario/reverb-realtime-chat.git
+    cd reverb-realtime-chat
+    ```
 
-## Laravel Sponsors
+2. **Actualizar Dependencias** ![Update](https://img.shields.io/badge/Update-Dependencies-brightgreen)
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+    - **Composer** ![Composer](https://img.shields.io/badge/Composer-Update-blue)
 
-### Premium Partners
+      ```bash
+      composer update
+      ```
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+    - **NPM** ![NPM](https://img.shields.io/badge/NPM-Update-yellow)
 
-## Contributing
+      ```bash
+      npm update
+      ```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+3. **Configurar el Entorno** ![Environment](https://img.shields.io/badge/Setup-Environment-orange)
 
-## Code of Conduct
+    Copia el archivo de ejemplo de configuración:
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+    ```bash
+    cp .env.example .env
+    ```
 
-## Security Vulnerabilities
+    Luego, edita el archivo `.env` para configurar tus credenciales de base de datos y servicios de broadcasting.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+4. **Generar Clave de Aplicación** ![Key](https://img.shields.io/badge/Generate-Key-blue)
 
-## License
+    ```bash
+    php artisan key:generate
+    ```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-"# reverb-realtime-chat" 
+5. **Migrar la Base de Datos y Cargar Semillas** ![Migrate](https://img.shields.io/badge/Migrate--Seed-brightgreen)
+
+    ```bash
+    php artisan migrate --seed
+    ```
+
+6. **Iniciar los Servidores de Desarrollo** ![Start](https://img.shields.io/badge/Start-Servers-yellowgreen)
+
+    - **Mantener NPM en Ejecución** ![NPM Run](https://img.shields.io/badge/NPM%20Run%20Dev-blueviolet)
+
+      ```bash
+      npm run dev
+      ```
+
+    - **Iniciar el Servicio de Broadcasting** ![Broadcasting](https://img.shields.io/badge/Start%20Broadcasting-yellow)
+
+      ```bash
+      php artisan reverb:start
+      ```
+
+## Uso
+
+- Accede a la aplicación en tu navegador local en `http://localhost`.
+- Navega a la lista de usuarios para iniciar nuevas conversaciones.
+- Revisa y participa en conversaciones existentes desde la vista de lista de conversaciones.
+
+
+## Contacto
+
+Si tienes preguntas o necesitas ayuda, no dudes en ponerte en contacto con [ulloadeifheltsteven@gmail.com](mailto:ulloadeifheltsteven@gmail.com).
+
